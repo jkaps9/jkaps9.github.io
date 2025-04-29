@@ -49,6 +49,10 @@ header a:hover {
     color: #aaa
 }
 
+header .fa {
+    font-size: 22px;
+}
+
 /* SECTIONS */
 section {
     flex: 1;
