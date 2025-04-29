@@ -66,4 +66,32 @@ footer {
     background-color: #06064e;
     color: white;
     font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+footer .container {
+    flex: 1;
+    display: flex;
+    gap: 88px;
+    max-width: 1400px;
+}
+
+footer .copyright {
+    margin-right: auto;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: #aaa
 }
