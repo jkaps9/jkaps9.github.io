@@ -10,12 +10,44 @@ body {
     min-height: 100vh;
 }
 
-header,
+/* HEADER */
+header {
+    flex: 0;
+    height: 72px;
+    display: flex;
+    gap: 88px;
+    padding: 24px;
+    background-color: #06064e;
+    color: white;
+    font-size: 18px;
+}
+
+header .logo {
+    margin-right: auto;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover {
+    color: #aaa
+}
+
+/* SECTIONS */
+section {
+    flex: 1;
+}
+
+/* FOOTER */
 footer {
     flex: 0;
     height: 72px;
-}
-
-section {
-    flex: 1;
 }
