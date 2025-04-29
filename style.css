@@ -10,6 +10,31 @@ body {
     min-height: 100vh;
 }
 
+/* General Styling */
+a {
+    text-decoration: none;
+}
+
+/* Reusable Components */
+.container {
+    flex: 1;
+    display: flex;
+    max-width: 1400px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: rgba(17, 12, 46, 0.10) 0px 48px 100px 0px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    width: 240px;
+}
+
 /* HEADER */
 header {
     flex: 0;
@@ -20,14 +45,10 @@ header {
     font-size: 18px;
     display: flex;
     justify-content: center;
-
 }
 
 header .container {
-    flex: 1;
-    display: flex;
     gap: 88px;
-    max-width: 1400px;
 }
 
 header .logo {
@@ -56,6 +77,33 @@ header .fa {
 /* SECTIONS */
 section {
     flex: 1;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+section .container {
+    align-items: center;
+    flex-direction: column;
+}
+
+#components .card-container {
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 25px;
+    max-height: 480px;
+
+}
+
+#components h2 {
+    margin-bottom: 24px;
+}
+
+#components img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* FOOTER */
@@ -71,10 +119,7 @@ footer {
 }
 
 footer .container {
-    flex: 1;
-    display: flex;
     gap: 88px;
-    max-width: 1400px;
 }
 
 footer .copyright {
