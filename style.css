@@ -14,12 +14,20 @@ body {
 header {
     flex: 0;
     height: 72px;
-    display: flex;
-    gap: 88px;
     padding: 24px;
     background-color: #06064e;
     color: white;
     font-size: 18px;
+    display: flex;
+    justify-content: center;
+
+}
+
+header .container {
+    flex: 1;
+    display: flex;
+    gap: 88px;
+    max-width: 1400px;
 }
 
 header .logo {
@@ -29,7 +37,7 @@ header .logo {
 header ul {
     list-style: none;
     display: flex;
-    gap: 24px;
+    gap: 36px;
 }
 
 header a {
@@ -50,4 +58,8 @@ section {
 footer {
     flex: 0;
     height: 72px;
+    padding: 24px;
+    background-color: #06064e;
+    color: white;
+    font-size: 18px;
 }
