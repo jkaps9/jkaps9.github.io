@@ -319,6 +319,11 @@ footer {
   fill: var(--text-secondary);
 }
 
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 @media (min-width: 48rem) {
   header .nav-toggle {
     height: 0;
@@ -341,5 +346,15 @@ footer {
   }
   header .nav__item a {
     color: var(--text-color);
+  }
+  .projects__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 64rem) {
+  .projects__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
