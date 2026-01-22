@@ -7,15 +7,15 @@
   --primary-color: #1e3a8a;
   --primary-hover: #1e40af;
 
-  --accent-color: #84cc16;
-  --accent-hover: #65a30d;
+  --accent-color: #2d383a;
+  --accent-hover: #485a5e;
 
   --bg-color: #f1f1f1;
   --bg-secondary: #f9f9f9;
   --bg-tertiary: #f5f5f5;
 
-  --text-color: #333;
-  --text-secondary: #555;
+  --text-color: #2d383a;
+  --text-secondary: #e5e5e5;
   --text-muted: #666;
 
   --border-color: #e0e0e0;
@@ -75,7 +75,7 @@ section {
 }
 
 p {
-  color: var(--text-secondary);
+  color: var(--text-color);
 }
 
 .accent-text {
