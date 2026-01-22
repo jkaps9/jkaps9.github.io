@@ -1,6 +1,9 @@
-<section class="my-sites">
+<section
+  class="projects"
+  id="projects"
+>
   <div class="container">
-    <ul>
+    <ul class="projects__list">
       {% for repo in repos %}
         {% if repo.private === false %}
           <li>

@@ -2,16 +2,8 @@
   "name": "JKaps9 Landing Page",
   "navigation": [
     {
-      "text": "About",
-      "url": "/about/"
-    },
-    {
-      "text": "Services",
-      "url": "/services/"
-    },
-    {
       "text": "Projects",
-      "url": "/projects/"
+      "url": "/#projects"
     }
   ],
   "services": [
