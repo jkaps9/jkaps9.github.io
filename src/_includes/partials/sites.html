@@ -3,7 +3,14 @@
     <ul>
       {% for repo in repos %}
         {% if repo.private === false %}
-          <li><a href="#">{{ repo.name }}</a></li>
+          <li>
+            <a
+              href="https://jkaps9.github.io/{{ repo.name }}"
+              target="_blank"
+            >
+              {{ repo.name }}
+            </a>
+          </li>
         {% endif %}
       {% endfor %}
     </ul>
