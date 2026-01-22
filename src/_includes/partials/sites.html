@@ -1,0 +1,11 @@
+<section class="my-sites">
+  <div class="container">
+    <ul>
+      {% for repo in repos %}
+        {% if repo.private === false %}
+          <li><a href="#">{{ repo.name }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
