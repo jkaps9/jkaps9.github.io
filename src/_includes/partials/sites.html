@@ -5,10 +5,10 @@
   <div class="container">
     <ul class="projects__list">
       {% for repo in repos %}
-        {% if repo.private === false %}
+        {% if repo.has_pages === true %}
           <li>
             <a
-              href="{{ repo.html_url }}"
+              href="https://jkaps9.github.io/{{ repo.name }}"
               target="_blank"
             >
               {{ repo.name }}
