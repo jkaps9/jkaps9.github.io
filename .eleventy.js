@@ -50,8 +50,8 @@ export default function (config) {
       .filter((item) => item.has_pages === true)
       .sort((a, b) => {
         // Convert ISO strings to Luxon objects and get the millisecond value
-        const dateA = DateTime.fromISO(a.created_at).toMillis();
-        const dateB = DateTime.fromISO(b.created_at).toMillis();
+        const dateA = DateTime.fromISO(a.pushed_at).toMillis();
+        const dateB = DateTime.fromISO(b.pushed_at).toMillis();
 
         return dateB - dateA;
       });
