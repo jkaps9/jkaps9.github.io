@@ -6,15 +6,17 @@
     <h1>My Projects</h1>
     <ul class="projects__list">
       {% for repo in collections.sortedRepos %}
-        <li>
-          <a
-            href="https://jkaps9.github.io/{{ repo.name }}"
-            target="_blank"
-          >
-            {{ repo.name }}
-          </a>
-          <p>Last updated: {{ repo.pushed_at | readableDate }}</p>
-        </li>
+        {% if repo.name !== "jkaps9.github.io" %}
+          <li>
+            <a
+              href="https://jkaps9.github.io/{{ repo.name }}"
+              target="_blank"
+            >
+              {{ repo.name }}
+            </a>
+            <p>Last updated: {{ repo.pushed_at | readableDate }}</p>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>
