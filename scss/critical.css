@@ -122,6 +122,25 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+a {
+  color: var(--accent-color);
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1em;
+}
+
 .container {
   margin: 0 auto;
   max-width: var(--container-max-width);
@@ -349,12 +368,7 @@ footer {
   }
   .projects__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 64rem) {
-  .projects__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
