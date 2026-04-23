@@ -341,12 +341,3 @@ footer {
     }
   }
 }
-
-@media (min-width: 64rem) {
-  .projects {
-    &__list {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-}

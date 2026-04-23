@@ -44,7 +44,7 @@ export default function (config) {
 
   // add date filter
   config.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
+    return DateTime.fromISO(dateObj).toLocaleString(DateTime.DATE_MED);
   });
 
   return {
