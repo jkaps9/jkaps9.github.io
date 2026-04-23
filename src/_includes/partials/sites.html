@@ -13,6 +13,7 @@
           >
             {{ repo.name }}
           </a>
+          <p>Last Updated: {{ repo.created_at | readableDate }}</p>
         </li>
       {% endfor %}
     </ul>

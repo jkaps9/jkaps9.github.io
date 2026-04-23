@@ -64,6 +64,16 @@ body {
     color 0.3s ease;
 }
 
+a {
+  color: var(--accent-color);
+  font-size: 1.4rem;
+  text-decoration: none;
+  &:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -337,7 +347,8 @@ footer {
   .projects {
     &__list {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

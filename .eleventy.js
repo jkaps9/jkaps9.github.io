@@ -59,7 +59,7 @@ export default function (config) {
 
   // add date filter
   config.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromISO(dateObj).toLocaleString(DateTime.DATE_SHORT);
+    return DateTime.fromISO(dateObj).toLocaleString(DateTime.DATE_MED);
   });
 
   return {
