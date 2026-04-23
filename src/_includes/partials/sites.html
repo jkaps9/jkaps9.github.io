@@ -5,19 +5,15 @@
   <div class="container">
     <h1>My Projects</h1>
     <ul class="projects__list">
-      {% for repo in repos %}
-        {% if repo.has_pages === true %}
-          <li>
-            <a
-              href="https://jkaps9.github.io/{{ repo.name }}"
-              target="_blank"
-            >
-              {{ repo.name }}
-            </a>
-            <span>-</span>
-            <span>{{ repo.created_at | readableDate }}</span>
-          </li>
-        {% endif %}
+      {% for repo in collections.sortedRepos %}
+        <li>
+          <a
+            href="https://jkaps9.github.io/{{ repo.name }}"
+            target="_blank"
+          >
+            {{ repo.name }}
+          </a>
+        </li>
       {% endfor %}
     </ul>
   </div>

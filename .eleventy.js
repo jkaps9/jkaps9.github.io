@@ -42,9 +42,24 @@ export default function (config) {
 
   config.addWatchTarget("./src/scss/");
 
+  // add collections
+  config.addCollection("sortedRepos", function (collectionApi) {
+    const data = collectionApi.getAll()[0].data.repos;
+
+    return data
+      .filter((item) => item.has_pages === true)
+      .sort((a, b) => {
+        // Convert ISO strings to Luxon objects and get the millisecond value
+        const dateA = DateTime.fromISO(a.created_at).toMillis();
+        const dateB = DateTime.fromISO(b.created_at).toMillis();
+
+        return dateB - dateA;
+      });
+  });
+
   // add date filter
   config.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromISO(dateObj).toLocaleString(DateTime.DATE_MED);
+    return DateTime.fromISO(dateObj).toLocaleString(DateTime.DATE_SHORT);
   });
 
   return {
