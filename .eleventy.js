@@ -1,6 +1,8 @@
 import path from "node:path";
 import * as sass from "sass";
 import { DateTime } from "luxon";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import fs from "fs";
 
 export default function (config) {
   // add SCSS template format
@@ -40,6 +42,8 @@ export default function (config) {
     },
   });
 
+  config.addPlugin(eleventyImageTransformPlugin);
+
   config.addWatchTarget("./src/scss/");
 
   // add collections
@@ -60,6 +64,16 @@ export default function (config) {
   // add date filter
   config.addFilter("readableDate", (dateObj) => {
     return DateTime.fromISO(dateObj).toLocaleString(DateTime.DATE_MED);
+  });
+
+  // check if file exists
+  config.addFilter("fileExists", function (filepath) {
+    try {
+      return fs.existsSync(filepath);
+    } catch (err) {
+      console.log(`${filepath} does not exist`);
+      return false;
+    }
   });
 
   return {

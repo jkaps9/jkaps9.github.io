@@ -331,6 +331,10 @@ footer {
   max-height: 375px;
   overflow: hidden;
   width: auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (min-width: 48rem) {

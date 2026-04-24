@@ -15,10 +15,15 @@
               {{ repo.name }}
 
               <div class="project-screenshot">
-                <img
-                  src="{{ '/assets/images/screenshots/'+repo.name+'_screenshot.png' | url }}"
-                  alt="screenshot"
-                />
+                {% set imgpath = './src/assets/images/screenshots/'+repo.name+'_screenshot.png' %}
+                {% if  imgpath | fileExists %}
+                  <img
+                    src="{{ '/assets/images/screenshots/'+repo.name+'_screenshot.png' | url }}"
+                    alt="screenshot"
+                  />
+                {% else %}
+                  <p>{{ imgpath }}</p>
+                {% endif %}
               </div>
               <p>Last updated: {{ repo.pushed_at | readableDate }}</p>
               <p>
