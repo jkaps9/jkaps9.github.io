@@ -1,6 +1,29 @@
 const fs = require("fs");
 const https = require("https");
 
+const manualUrls = [
+  {
+    name: "product-preview-card-component-main",
+    url: "https://raw.githubusercontent.com/jkaps9/product-preview-card-component-main/main/images/screenshot.png",
+  },
+  {
+    name: "testimonials-grid-section-main",
+    url: "https://raw.githubusercontent.com/jkaps9/testimonials-grid-section-main/main/images/screenshot.png",
+  },
+  {
+    name: "four-card-feature-section-master",
+    url: "https://raw.githubusercontent.com/jkaps9/four-card-feature-section-master/main/images/screenshot.png",
+  },
+  {
+    name: "social-links-profile-main",
+    url: "https://raw.githubusercontent.com/jkaps9/social-links-profile-main/main/images/screenshot.png",
+  },
+  {
+    name: "qr-code-component-main",
+    url: "https://raw.githubusercontent.com/jkaps9/qr-code-component-main/main/images/screenshot.png",
+  },
+];
+
 function getUrls() {
   let urls = [];
   // Read the JSON file synchronously
@@ -64,7 +87,8 @@ function downloadFromUrl(url, name) {
   });
 }
 
-const urls = getUrls();
+const dynamicUrls = getUrls();
+const urls = dynamicUrls.concat(manualUrls);
 if (urls.length > 0) {
   urls.forEach((item) => {
     console.log(`Attempting to download ${item.url}`);
