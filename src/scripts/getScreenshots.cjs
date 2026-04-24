@@ -11,15 +11,13 @@ function getUrls() {
     const url =
       // Loop through the array to find the URLs
       items.forEach((item) => {
-        if (item.name.substring(0, 1) === "p") {
-          urls.push({
-            name: item.name,
-            url:
-              "https://raw.githubusercontent.com/" +
-              item.full_name +
-              "/main/screenshot.png",
-          });
-        }
+        urls.push({
+          name: item.name,
+          url:
+            "https://raw.githubusercontent.com/" +
+            item.full_name +
+            "/main/screenshot.png",
+        });
       });
   } catch (err) {
     console.error("Error reading or parsing file:", err);
@@ -29,7 +27,7 @@ function getUrls() {
 
 function downloadFromUrl(url, name) {
   const filepath = `./src/assets/images/screenshots/${name}_screenshot.png`;
-  const file = fs.createWriteStream(filepath);
+  const file = fs.createWriteStream(filepath, { flags: "wx" });
   https
     .get(url, (response) => {
       if (response.statusCode === 404) {
@@ -56,6 +54,14 @@ function downloadFromUrl(url, name) {
       );
       console.error(err.message);
     });
+
+  file.on("error", (err) => {
+    if (err.code === "EEXIST") {
+      console.log("File already exists");
+    } else {
+      console.error(`Error: ${err.message}`);
+    }
+  });
 }
 
 const urls = getUrls();
