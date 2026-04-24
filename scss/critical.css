@@ -127,8 +127,20 @@ a {
   font-size: 1.4rem;
   text-decoration: none;
 }
+a p {
+  font-size: 1rem;
+}
 a:hover {
   color: var(--accent-hover);
+}
+a:hover p {
+  color: var(--text-muted);
+}
+
+p a {
+  color: inherit;
+  opacity: 0.5;
+  font-size: 1rem;
   text-decoration: underline;
 }
 
@@ -344,6 +356,12 @@ footer {
   grid-template-columns: repeat(1, 1fr);
 }
 
+.project-screenshot {
+  max-height: 375px;
+  overflow: hidden;
+  width: auto;
+}
+
 @media (min-width: 48rem) {
   header .nav-toggle {
     height: 0;
@@ -369,6 +387,6 @@ footer {
   }
   .projects__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
   }
 }
