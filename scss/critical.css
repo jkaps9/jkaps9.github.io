@@ -361,6 +361,10 @@ footer {
   overflow: hidden;
   width: auto;
 }
+.project-screenshot img {
+  width: 100%;
+  height: auto;
+}
 
 @media (min-width: 48rem) {
   header .nav-toggle {
