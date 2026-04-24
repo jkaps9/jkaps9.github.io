@@ -168,6 +168,11 @@ footer {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(1, 1fr);
+
+    li {
+      border: 1px solid var(--border-color);
+      padding: 1rem;
+    }
   }
 }
 
