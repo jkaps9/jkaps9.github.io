@@ -22,8 +22,20 @@
               </div>
               <p>Last updated: {{ repo.pushed_at | readableDate }}</p>
               <p>
-                <a href="{{ repo.contents_url | replace('{+path}','') }}">
+                <a
+                  href="{{ repo.contents_url | replace('{+path}','') }}"
+                  target="_blank"
+                >
                   {{ repo.contents_url | replace('{+path}','') }}
+                </a>
+              </p>
+              <p>
+                Repo:
+                <a
+                  href="{{ repo.html_url }}"
+                  target="_blank"
+                >
+                  {{ repo.html_url }}
                 </a>
               </p>
             </a>
