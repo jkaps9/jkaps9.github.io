@@ -68,9 +68,14 @@ a {
   color: var(--accent-color);
   font-size: 1.4rem;
   text-decoration: none;
+  p {
+    font-size: 1rem;
+  }
   &:hover {
     color: var(--accent-hover);
-    text-decoration: underline;
+    p {
+      color: var(--text-muted);
+    }
   }
 }
 
@@ -313,6 +318,12 @@ footer {
   }
 }
 
+.project-screenshot {
+  max-height: 375px;
+  overflow: hidden;
+  width: auto;
+}
+
 @media (min-width: 48rem) {
   header {
     .nav-toggle {
@@ -348,7 +359,7 @@ footer {
   .projects {
     &__list {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
     }
   }
 }

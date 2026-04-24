@@ -13,16 +13,15 @@
               target="_blank"
             >
               {{ repo.name }}
-            </a>
-            <p>Last updated: {{ repo.pushed_at | readableDate }}</p>
-            <a href="{{ repo.contents_url + '/_links/html' }}">
-              {{ repo.contents_url + '/_links/html' }}
-            </a>
 
-            <img
-              src="{{ '/assets/images/screenshots/'+repo.name+'_screenshot.png' | url }}"
-              alt="screenshot"
-            />
+              <div class="project-screenshot">
+                <img
+                  src="{{ '/assets/images/screenshots/'+repo.name+'_screenshot.png' | url }}"
+                  alt="screenshot"
+                />
+              </div>
+              <p>Last updated: {{ repo.pushed_at | readableDate }}</p>
+            </a>
           </li>
         {% endif %}
       {% endfor %}
