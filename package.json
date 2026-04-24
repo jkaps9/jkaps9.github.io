@@ -6,7 +6,8 @@
   "scripts": {
     "build-ghpages": "npx @11ty/eleventy --pathprefix=/",
     "start": "npx eleventy --serve",
-    "lint": "prettier --write ."
+    "lint": "prettier --write .",
+    "get-screenshots": "node src/scripts/getScreenshots.cjs"
   },
   "repository": {
     "type": "git",

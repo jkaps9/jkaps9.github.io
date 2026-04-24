@@ -15,6 +15,14 @@
               {{ repo.name }}
             </a>
             <p>Last updated: {{ repo.pushed_at | readableDate }}</p>
+            <a href="{{ repo.contents_url + '/_links/html' }}">
+              {{ repo.contents_url + '/_links/html' }}
+            </a>
+
+            <img
+              src="{{ '/assets/images/screenshots/'+repo.name+'_screenshot.png' | url }}"
+              alt="screenshot"
+            />
           </li>
         {% endif %}
       {% endfor %}
