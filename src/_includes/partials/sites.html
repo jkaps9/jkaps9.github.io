@@ -21,6 +21,11 @@
                 />
               </div>
               <p>Last updated: {{ repo.pushed_at | readableDate }}</p>
+              <p>
+                <a href="{{ repo.contents_url | replace('{+path}','') }}">
+                  {{ repo.contents_url | replace('{+path}','') }}
+                </a>
+              </p>
             </a>
           </li>
         {% endif %}

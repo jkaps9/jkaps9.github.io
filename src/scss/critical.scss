@@ -79,6 +79,15 @@ a {
   }
 }
 
+p {
+  a {
+    color: inherit;
+    opacity: 0.5;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+}
+
 h1,
 h2,
 h3,
