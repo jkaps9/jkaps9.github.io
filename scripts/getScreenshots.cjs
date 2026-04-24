@@ -22,6 +22,10 @@ const manualUrls = [
     name: "qr-code-component-main",
     url: "https://raw.githubusercontent.com/jkaps9/qr-code-component-main/main/images/screenshot.png",
   },
+  {
+    name: "personal-finance-app",
+    url: "https://raw.githubusercontent.com/jkaps9/personal-finance-app/main/screenshot_overview.png",
+  },
 ];
 
 function getUrls() {
@@ -88,7 +92,12 @@ function downloadFromUrl(url, name) {
 }
 
 const dynamicUrls = getUrls();
-const urls = dynamicUrls.concat(manualUrls);
+const namesToRemove = new Set(manualUrls.map((item) => item.name));
+
+const filteredArray = dynamicUrls.filter(
+  (item) => !namesToRemove.has(item.name),
+);
+const urls = filteredArray.concat(manualUrls);
 if (urls.length > 0) {
   urls.forEach((item) => {
     console.log(`Attempting to download ${item.url}`);
