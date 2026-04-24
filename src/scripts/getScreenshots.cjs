@@ -88,7 +88,12 @@ function downloadFromUrl(url, name) {
 }
 
 const dynamicUrls = getUrls();
-const urls = dynamicUrls.concat(manualUrls);
+const namesToRemove = new Set(manualUrls.map((item) => item.name));
+
+const filteredArray = dynamicUrls.filter(
+  (item) => !namesToRemove.has(item.name),
+);
+const urls = filteredArray.concat(manualUrls);
 if (urls.length > 0) {
   urls.forEach((item) => {
     console.log(`Attempting to download ${item.url}`);
