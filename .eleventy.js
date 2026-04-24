@@ -11,7 +11,7 @@ export default function (config) {
   config.addPassthroughCopy("./src/main.js");
 
   // Set directories to pass through to the dist folder
-  config.addPassthroughCopy("./src/assets");
+  // config.addPassthroughCopy("./src/assets");
   config.addPassthroughCopy("./src/scripts");
   config.addPassthroughCopy("./src/admin");
 
